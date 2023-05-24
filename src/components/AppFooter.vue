@@ -1,6 +1,10 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+  defineProps<{ content: string }>();
+</script>
 <template>
-  <div></div>
+  <footer>
+    <h2>{{ content }}</h2>
+  </footer>
 </template>
 
 <style scoped></style>

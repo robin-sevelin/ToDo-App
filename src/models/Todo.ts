@@ -1,3 +1,6 @@
 export class Todo {
-  constructor(public name: string, public done: boolean) {}
+  todoDone: boolean;
+  constructor(public name: string) {
+    this.todoDone = false;
+  }
 }
