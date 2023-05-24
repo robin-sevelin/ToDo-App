@@ -1,9 +1,6 @@
 <script setup lang="ts"></script>
-
 <template>
-  <AppHeader />
-  <AppMain />
-  <AppFooter />
+  <div></div>
 </template>
 
 <style scoped></style>
