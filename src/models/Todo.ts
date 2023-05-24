@@ -1,6 +1,3 @@
 export class Todo {
-  todoDone: boolean;
-  constructor(public name: string) {
-    this.todoDone = false;
-  }
+  constructor(public name: string, public done: boolean, public id: number) {}
 }

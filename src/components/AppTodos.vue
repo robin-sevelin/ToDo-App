@@ -4,13 +4,12 @@
 
   const todos = <Todo[]>[];
 
-  todos.push(new Todo('hej'));
-  todos.push(new Todo('tjo'));
-
-  console.log(todos);
+  todos.push(new Todo('hej', false, 1));
 </script>
 <template>
-  <AppTodo />
+  <div class="todo-container">
+    <AppTodo :todo="todo" v-for="todo in todos" :key="todo.id" />
+  </div>
 </template>
 
 <style scoped></style>
