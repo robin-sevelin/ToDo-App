@@ -2,12 +2,28 @@
   import { ITodoProps } from '../models/ITodoProps';
 
   const props = defineProps<ITodoProps>();
+
+  const emits = defineEmits(['toggle', 'remove']);
+
+  const toggleClick = () => {
+    emits('toggle', props.todo.id);
+    console.log(props.todo.isDone);
+  };
+
+  const removeClick = () => {
+    emits('remove', props.todo.id);
+  };
 </script>
 <template>
-  <div todo="todo">
-    <h3>{{ props.todo.name }}</h3>
-    <input type="checkbox" :v-if="todo.done === true" checked />
+  <div>
+    <h3 :class="{ done: props.todo.isDone }">{{ props.todo.name }}</h3>
+    <button @click="toggleClick" todo="todo">Toggle done</button>
+    <button @click="removeClick">Remove todo</button>
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+  .done {
+    text-decoration: line-through;
+  }
+</style>
