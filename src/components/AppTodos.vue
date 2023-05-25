@@ -42,18 +42,4 @@
   </div>
 </template>
 
-<style scoped>
-  /* .todo-container {
-    padding-top: 3rem;
-    gap: 2rem;
-    width: 600px;
-    height: 500px;
-    overflow-y: scroll;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    border-radius: 10px;
-  } */
-</style>
+<style scoped></style>

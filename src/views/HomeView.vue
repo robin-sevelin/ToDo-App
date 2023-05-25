@@ -1,7 +1,9 @@
 <script setup lang="ts">
-  import App from '../App.vue';
+  import AppMain from '../components/AppMain.vue';
 </script>
 
 <template>
-  <App />
+  <AppMain />
 </template>
+
+<style scoped></style>

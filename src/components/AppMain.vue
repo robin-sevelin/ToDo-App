@@ -1,7 +1,5 @@
 <script setup lang="ts">
   import AppTodos from './AppTodos.vue';
-
-  defineProps<{ content: string }>();
 </script>
 <template>
   <main>
@@ -10,7 +8,7 @@
 </template>
 
 <style scoped>
-  /* main {
+  main {
     max-width: 960px;
     margin: auto;
     top: 50px;
@@ -19,5 +17,5 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  } */
+  }
 </style>

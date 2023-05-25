@@ -4,19 +4,19 @@
 <template>
   <header>
     <h1>{{ content }}</h1>
-    <RouterLink to="/">Home</RouterLink> |
-    <RouterLink to="/about">About</RouterLink>
-    <RouterView></RouterView>
+    <nav>
+      <RouterLink to="/">Home</RouterLink> |
+      <RouterLink to="/about">About</RouterLink>
+    </nav>
   </header>
 </template>
 
 <style scoped>
-  /* header {
-    background-color: aqua;
+  header {
     height: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-  } */
+  }
 </style>

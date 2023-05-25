@@ -24,7 +24,7 @@
 </template>
 
 <style scoped>
-  /* form {
+  form {
     position: relative;
     width: 500px;
     display: flex;
@@ -37,5 +37,5 @@
   button {
     position: relative;
     top: 10px;
-  } */
+  }
 </style>
