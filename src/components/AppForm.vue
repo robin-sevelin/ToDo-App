@@ -8,6 +8,9 @@
   }>();
 
   const handleSubmit = () => {
+    if (todoInput.value === '') {
+      return;
+    }
     emits('newTodo', todoInput.value);
 
     todoInput.value = '';
@@ -20,4 +23,19 @@
   </form>
 </template>
 
-<style scoped></style>
+<style scoped>
+  /* form {
+    position: relative;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+
+  button {
+    position: relative;
+    top: 10px;
+  } */
+</style>

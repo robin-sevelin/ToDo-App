@@ -3,11 +3,15 @@
 
   const props = defineProps<ITodoProps>();
 
-  const emits = defineEmits(['toggle', 'remove']);
+  // const emits = defineEmits(['toggle', 'remove']);
+
+  const emits = defineEmits<{
+    (e: 'toggle', payload: number): void;
+    (e: 'remove', payload: number): void;
+  }>();
 
   const toggleClick = () => {
     emits('toggle', props.todo.id);
-    console.log(props.todo.isDone);
   };
 
   const removeClick = () => {
@@ -17,13 +21,22 @@
 <template>
   <div>
     <h3 :class="{ done: props.todo.isDone }">{{ props.todo.name }}</h3>
-    <button @click="toggleClick" todo="todo">Toggle done</button>
-    <button @click="removeClick">Remove todo</button>
+    <button class="toggle" @click="toggleClick" todo="todo">Toggle Todo</button>
+    <button class="remove" @click="removeClick">Remove Todo</button>
   </div>
 </template>
 
 <style scoped>
   .done {
     text-decoration: line-through;
+  }
+
+  .toggle {
+    background-color: lightgreen;
+  }
+
+  .remove {
+    background-color: red;
+    color: white;
   }
 </style>

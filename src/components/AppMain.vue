@@ -5,9 +5,19 @@
 </script>
 <template>
   <main>
-    <h2>{{ content }}</h2>
     <AppTodos />
   </main>
 </template>
 
-<style scoped></style>
+<style scoped>
+  /* main {
+    max-width: 960px;
+    margin: auto;
+    top: 50px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  } */
+</style>

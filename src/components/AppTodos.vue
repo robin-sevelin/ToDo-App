@@ -7,17 +7,11 @@
   const todos = ref<Todo[]>([]);
 
   onMounted(() => {
-    const savedTodos = localStorage.getItem(
-      'todos' + JSON.stringify(todos.value)
-    );
-    if (savedTodos) {
-      todos.value = JSON.parse(savedTodos);
-    }
+    localStorage.getItem('todos' || []);
   });
 
   const addTodo = (payload: string) => {
     todos.value = [...todos.value, new Todo(payload, new Date().getTime())];
-    localStorage.setItem('todos', JSON.stringify(todos.value));
   };
 
   const toggleDone = (payload: number) => {
@@ -32,8 +26,6 @@
 
   const removeTodo = (payload: number) => {
     todos.value = todos.value.filter((todo) => todo.id !== payload);
-    localStorage.setItem('todos', JSON.stringify(todos.value));
-    localStorage.removeItem('todos' + payload);
   };
 </script>
 
@@ -50,4 +42,18 @@
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+  /* .todo-container {
+    padding-top: 3rem;
+    gap: 2rem;
+    width: 600px;
+    height: 500px;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+  } */
+</style>
