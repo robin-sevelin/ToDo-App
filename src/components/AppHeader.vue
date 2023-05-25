@@ -4,6 +4,9 @@
 <template>
   <header>
     <h1>{{ content }}</h1>
+    <RouterLink to="/">Home</RouterLink> |
+    <RouterLink to="/about">About</RouterLink>
+    <RouterView></RouterView>
   </header>
 </template>
 
