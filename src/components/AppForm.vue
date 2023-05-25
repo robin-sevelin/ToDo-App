@@ -37,5 +37,15 @@
   button {
     position: relative;
     top: 10px;
+    border-radius: 5px;
+    height: 40px;
+    border: none;
+    width: 100px;
+    margin-left: 10px;
+    background-color: lightskyblue;
+  }
+
+  button:hover {
+    cursor: pointer;
   }
 </style>
